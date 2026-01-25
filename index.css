@@ -685,6 +685,41 @@ button {
     color: var(--color-accent);
 }
 
+/* Clickable Project Title Link */
+.project-card-title-link {
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    position: relative;
+}
+
+.project-card-title-link:hover {
+    color: var(--color-accent);
+}
+
+.project-card-title-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    transition: width var(--transition-normal);
+}
+
+.project-card-title-link:hover::after {
+    width: 100%;
+}
+
+.project-card-title-link:focus {
+    outline: none;
+    color: var(--color-accent);
+}
+
+.project-card-title-link:focus::after {
+    width: 100%;
+}
+
 .project-card-description {
     font-size: var(--fz-sm);
     color: var(--color-text-secondary);
@@ -1304,10 +1339,22 @@ body.menu-open::before {
     border-radius: var(--border-radius);
     padding: var(--spacing-lg);
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .slide-placeholder svg {
     opacity: 0.5;
+}
+
+.slide-placeholder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: var(--border-radius);
 }
 
 .slide-title {
@@ -1453,5 +1500,173 @@ body.modal-open {
     .carousel-btn svg {
         width: 18px;
         height: 18px;
+    }
+}
+
+/* ===== HACKATHONS SECTION ===== */
+.hackathons .section-description {
+    max-width: 700px;
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--fz-lg);
+}
+
+.hackathons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.hackathon-card {
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hackathon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.hackathon-image-wrapper {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hackathon-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.hackathon-preview-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-bg-tertiary), var(--color-bg-primary));
+    color: var(--color-accent);
+    opacity: 0.6;
+    transition: opacity var(--transition-normal);
+}
+
+.hackathon-image-wrapper:hover .hackathon-preview-placeholder {
+    opacity: 0.4;
+}
+
+.hackathon-image-wrapper:hover .hackathon-preview {
+    transform: scale(1.05);
+}
+
+.hackathon-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 25, 47, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    color: var(--color-accent);
+}
+
+.hackathon-image-wrapper:hover .hackathon-image-overlay,
+.hackathon-image-wrapper:focus .hackathon-image-overlay {
+    opacity: 1;
+}
+
+.hackathon-image-overlay span {
+    font-family: var(--font-mono);
+    font-size: var(--fz-sm);
+}
+
+.hackathon-content {
+    padding: var(--spacing-md);
+}
+
+.hackathon-title {
+    font-size: var(--fz-xl);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+    transition: color var(--transition-fast);
+}
+
+.hackathon-card:hover .hackathon-title {
+    color: var(--color-accent);
+}
+
+.hackathon-description {
+    font-size: var(--fz-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.hackathon-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.hackathon-location,
+.hackathon-date {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    color: var(--color-text-secondary);
+}
+
+.hackathon-location svg,
+.hackathon-date svg {
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+/* Hackathon Modal Styles (inherit from main modal) */
+.hackathon-modal .modal-title {
+    font-size: var(--fz-lg);
+}
+
+/* ===== HACKATHONS RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .hackathons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .hackathons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hackathon-meta {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .hackathon-content {
+        padding: var(--spacing-sm);
+    }
+    
+    .hackathon-title {
+        font-size: var(--fz-lg);
+    }
+    
+    .hackathon-description {
+        font-size: var(--fz-xs);
     }
 }

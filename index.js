@@ -287,12 +287,12 @@ const modalOverlay = document.getElementById('modal-overlay');
 const modalClose = document.getElementById('modal-close');
 const openGalleryBtn = document.getElementById('open-gallery');
 
-// Carousel Elements
+// Carousel Elements - scoped to library modal only
 const carouselInner = document.getElementById('carousel-inner');
-const carouselSlides = document.querySelectorAll('.carousel-slide');
+const carouselSlides = galleryModal ? galleryModal.querySelectorAll('.carousel-slide') : [];
 const carouselPrev = document.getElementById('carousel-prev');
 const carouselNext = document.getElementById('carousel-next');
-const carouselDots = document.querySelectorAll('.carousel-dot');
+const carouselDots = galleryModal ? galleryModal.querySelectorAll('.carousel-dot') : [];
 const currentSlideEl = document.getElementById('current-slide');
 const totalSlidesEl = document.getElementById('total-slides');
 
@@ -467,4 +467,419 @@ function handleSwipe() {
 document.addEventListener('DOMContentLoaded', function() {
     initializeModalListeners();
     initializeTouchSupport();
+});
+
+// ===== HACKATHON GALLERY MODALS =====
+
+// Track current slide for each hackathon modal
+const hackathonCarouselState = {
+    1: { currentSlide: 0, totalSlides: 3 },
+    2: { currentSlide: 0, totalSlides: 3 },
+    3: { currentSlide: 0, totalSlides: 3 },
+    4: { currentSlide: 0, totalSlides: 3 }
+};
+
+// Currently active hackathon modal
+let activeHackathonModal = null;
+
+// Open hackathon modal
+function openHackathonModal(hackathonId) {
+    const modal = document.getElementById(`hackathon-modal-${hackathonId}`);
+    if (modal) {
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        activeHackathonModal = hackathonId;
+        // Reset to first slide
+        goToHackathonSlide(hackathonId, 0);
+    }
+}
+
+// Close hackathon modal
+function closeHackathonModal(hackathonId) {
+    const modal = document.getElementById(`hackathon-modal-${hackathonId}`);
+    if (modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        activeHackathonModal = null;
+    }
+}
+
+// Go to specific slide in hackathon carousel
+function goToHackathonSlide(hackathonId, index) {
+    const carousel = document.querySelector(`.hackathon-carousel[data-hackathon="${hackathonId}"]`);
+    if (!carousel) return;
+    
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    const carouselInner = carousel.querySelector('.hackathon-carousel-inner');
+    const modal = document.getElementById(`hackathon-modal-${hackathonId}`);
+    const currentSlideEl = modal.querySelector('.hackathon-current-slide');
+    
+    const totalSlides = slides.length;
+    
+    // Handle wrap-around
+    if (index < 0) {
+        index = totalSlides - 1;
+    } else if (index >= totalSlides) {
+        index = 0;
+    }
+    
+    // Update state
+    hackathonCarouselState[hackathonId].currentSlide = index;
+    
+    // Update carousel position
+    if (carouselInner) {
+        carouselInner.style.transform = `translateX(-${index * 100}%)`;
+    }
+    
+    // Update active states for slides
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+    
+    // Update active states for dots
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+    
+    // Update counter
+    if (currentSlideEl) {
+        currentSlideEl.textContent = index + 1;
+    }
+}
+
+// Next slide for hackathon carousel
+function nextHackathonSlide(hackathonId) {
+    const currentIndex = hackathonCarouselState[hackathonId].currentSlide;
+    goToHackathonSlide(hackathonId, currentIndex + 1);
+}
+
+// Previous slide for hackathon carousel
+function prevHackathonSlide(hackathonId) {
+    const currentIndex = hackathonCarouselState[hackathonId].currentSlide;
+    goToHackathonSlide(hackathonId, currentIndex - 1);
+}
+
+// Initialize hackathon modal event listeners
+function initializeHackathonModalListeners() {
+    // Open modal triggers
+    const hackathonTriggers = document.querySelectorAll('.hackathon-gallery-trigger');
+    hackathonTriggers.forEach(trigger => {
+        const hackathonId = trigger.getAttribute('data-hackathon');
+        
+        trigger.addEventListener('click', () => openHackathonModal(hackathonId));
+        trigger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openHackathonModal(hackathonId);
+            }
+        });
+    });
+    
+    // Close buttons
+    const closeButtons = document.querySelectorAll('.hackathon-modal-close');
+    closeButtons.forEach(btn => {
+        const hackathonId = btn.getAttribute('data-hackathon');
+        btn.addEventListener('click', () => closeHackathonModal(hackathonId));
+    });
+    
+    // Overlay clicks
+    const overlays = document.querySelectorAll('.hackathon-modal-overlay');
+    overlays.forEach(overlay => {
+        const hackathonId = overlay.getAttribute('data-hackathon');
+        overlay.addEventListener('click', () => closeHackathonModal(hackathonId));
+    });
+    
+    // Previous buttons
+    const prevButtons = document.querySelectorAll('.hackathon-carousel-prev');
+    prevButtons.forEach(btn => {
+        const hackathonId = btn.getAttribute('data-hackathon');
+        btn.addEventListener('click', () => prevHackathonSlide(hackathonId));
+    });
+    
+    // Next buttons
+    const nextButtons = document.querySelectorAll('.hackathon-carousel-next');
+    nextButtons.forEach(btn => {
+        const hackathonId = btn.getAttribute('data-hackathon');
+        btn.addEventListener('click', () => nextHackathonSlide(hackathonId));
+    });
+    
+    // Dot indicators
+    const hackathonCarousels = document.querySelectorAll('.hackathon-carousel');
+    hackathonCarousels.forEach(carousel => {
+        const hackathonId = carousel.getAttribute('data-hackathon');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToHackathonSlide(hackathonId, index));
+        });
+    });
+    
+    // Keyboard navigation for hackathon modals
+    document.addEventListener('keydown', handleHackathonModalKeyboard);
+}
+
+// Handle keyboard navigation for hackathon modals
+function handleHackathonModalKeyboard(e) {
+    if (!activeHackathonModal) return;
+    
+    switch (e.key) {
+        case 'Escape':
+            closeHackathonModal(activeHackathonModal);
+            break;
+        case 'ArrowLeft':
+            prevHackathonSlide(activeHackathonModal);
+            break;
+        case 'ArrowRight':
+            nextHackathonSlide(activeHackathonModal);
+            break;
+    }
+}
+
+// Initialize touch support for hackathon carousels
+function initializeHackathonTouchSupport() {
+    const hackathonCarousels = document.querySelectorAll('.hackathon-carousel');
+    
+    hackathonCarousels.forEach(carousel => {
+        const hackathonId = carousel.getAttribute('data-hackathon');
+        const carouselInner = carousel.querySelector('.hackathon-carousel-inner');
+        
+        if (!carouselInner) return;
+        
+        let startX = 0;
+        let endX = 0;
+        
+        carouselInner.addEventListener('touchstart', (e) => {
+            startX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        carouselInner.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].screenX;
+            const diff = startX - endX;
+            const threshold = 50;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    nextHackathonSlide(hackathonId);
+                } else {
+                    prevHackathonSlide(hackathonId);
+                }
+            }
+        }, { passive: true });
+    });
+}
+
+// Initialize hackathon modals when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    initializeHackathonModalListeners();
+    initializeHackathonTouchSupport();
+});
+
+// ===== OTHER PROJECTS GALLERY MODALS =====
+
+// Track current slide for each project modal
+const projectCarouselState = {
+    cat: { currentSlide: 0, totalSlides: 3 },
+    bookstore: { currentSlide: 0, totalSlides: 3 },
+    crypto: { currentSlide: 0, totalSlides: 3 }
+};
+
+// Currently active project modal
+let activeProjectModal = null;
+
+// Open project modal
+function openProjectModal(projectId) {
+    const modal = document.getElementById(`project-modal-${projectId}`);
+    if (modal) {
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        activeProjectModal = projectId;
+        // Reset to first slide
+        goToProjectSlide(projectId, 0);
+    }
+}
+
+// Close project modal
+function closeProjectModal(projectId) {
+    const modal = document.getElementById(`project-modal-${projectId}`);
+    if (modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        activeProjectModal = null;
+    }
+}
+
+// Go to specific slide in project carousel
+function goToProjectSlide(projectId, index) {
+    const carousel = document.querySelector(`.project-carousel[data-project="${projectId}"]`);
+    if (!carousel) return;
+    
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    const carouselInner = carousel.querySelector('.project-carousel-inner');
+    const modal = document.getElementById(`project-modal-${projectId}`);
+    const currentSlideEl = modal.querySelector('.project-current-slide');
+    
+    const totalSlides = slides.length;
+    
+    // Handle wrap-around
+    if (index < 0) {
+        index = totalSlides - 1;
+    } else if (index >= totalSlides) {
+        index = 0;
+    }
+    
+    // Update state
+    projectCarouselState[projectId].currentSlide = index;
+    
+    // Update carousel position
+    if (carouselInner) {
+        carouselInner.style.transform = `translateX(-${index * 100}%)`;
+    }
+    
+    // Update active states for slides
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+    
+    // Update active states for dots
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+    
+    // Update counter
+    if (currentSlideEl) {
+        currentSlideEl.textContent = index + 1;
+    }
+}
+
+// Next slide for project carousel
+function nextProjectSlide(projectId) {
+    const currentIndex = projectCarouselState[projectId].currentSlide;
+    goToProjectSlide(projectId, currentIndex + 1);
+}
+
+// Previous slide for project carousel
+function prevProjectSlide(projectId) {
+    const currentIndex = projectCarouselState[projectId].currentSlide;
+    goToProjectSlide(projectId, currentIndex - 1);
+}
+
+// Initialize project modal event listeners
+function initializeProjectModalListeners() {
+    // Open modal triggers (clickable titles)
+    const projectTriggers = document.querySelectorAll('.project-card-title-link');
+    projectTriggers.forEach(trigger => {
+        const projectId = trigger.getAttribute('data-project');
+        
+        trigger.addEventListener('click', () => openProjectModal(projectId));
+        trigger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openProjectModal(projectId);
+            }
+        });
+    });
+    
+    // Close buttons
+    const closeButtons = document.querySelectorAll('.project-modal-close');
+    closeButtons.forEach(btn => {
+        const projectId = btn.getAttribute('data-project');
+        btn.addEventListener('click', () => closeProjectModal(projectId));
+    });
+    
+    // Overlay clicks
+    const overlays = document.querySelectorAll('.project-modal-overlay');
+    overlays.forEach(overlay => {
+        const projectId = overlay.getAttribute('data-project');
+        overlay.addEventListener('click', () => closeProjectModal(projectId));
+    });
+    
+    // Previous buttons
+    const prevButtons = document.querySelectorAll('.project-carousel-prev');
+    prevButtons.forEach(btn => {
+        const projectId = btn.getAttribute('data-project');
+        btn.addEventListener('click', () => prevProjectSlide(projectId));
+    });
+    
+    // Next buttons
+    const nextButtons = document.querySelectorAll('.project-carousel-next');
+    nextButtons.forEach(btn => {
+        const projectId = btn.getAttribute('data-project');
+        btn.addEventListener('click', () => nextProjectSlide(projectId));
+    });
+    
+    // Dot indicators
+    const projectCarousels = document.querySelectorAll('.project-carousel');
+    projectCarousels.forEach(carousel => {
+        const projectId = carousel.getAttribute('data-project');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToProjectSlide(projectId, index));
+        });
+    });
+    
+    // Keyboard navigation for project modals
+    document.addEventListener('keydown', handleProjectModalKeyboard);
+}
+
+// Handle keyboard navigation for project modals
+function handleProjectModalKeyboard(e) {
+    if (!activeProjectModal) return;
+    
+    switch (e.key) {
+        case 'Escape':
+            closeProjectModal(activeProjectModal);
+            break;
+        case 'ArrowLeft':
+            prevProjectSlide(activeProjectModal);
+            break;
+        case 'ArrowRight':
+            nextProjectSlide(activeProjectModal);
+            break;
+    }
+}
+
+// Initialize touch support for project carousels
+function initializeProjectTouchSupport() {
+    const projectCarousels = document.querySelectorAll('.project-carousel');
+    
+    projectCarousels.forEach(carousel => {
+        const projectId = carousel.getAttribute('data-project');
+        const carouselInner = carousel.querySelector('.project-carousel-inner');
+        
+        if (!carouselInner) return;
+        
+        let startX = 0;
+        let endX = 0;
+        
+        carouselInner.addEventListener('touchstart', (e) => {
+            startX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        carouselInner.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].screenX;
+            const diff = startX - endX;
+            const threshold = 50;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    nextProjectSlide(projectId);
+                } else {
+                    prevProjectSlide(projectId);
+                }
+            }
+        }, { passive: true });
+    });
+}
+
+// Initialize project modals when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    initializeProjectModalListeners();
+    initializeProjectTouchSupport();
 });

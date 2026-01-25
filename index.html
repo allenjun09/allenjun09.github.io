@@ -30,13 +30,13 @@
                     <a href="#projects" class="nav-link"><span class="nav-number"></span> Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#interests" class="nav-link"><span class="nav-number"></span> Interests</a>
+                    <a href="#hackathons" class="nav-link"><span class="nav-number"></span> Hackathons</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link"><span class="nav-number"></span> Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="btn btn-outline nav-resume">Resume</a>
+                    <a href="resume/Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline nav-resume">Resume</a>
                 </li>
             </ul>
         </div>
@@ -50,8 +50,7 @@
             <!-- <h2 class="hero-tagline animate-fade-up">I build things for the web.</h2> -->
             <p class="hero-description animate-fade-up">
                 A <span class="highlight">BS Information Technology major in Software Engineering</span> student passionate about 
-                building robust backend systems and full-stack applications. Currently seeking internship 
-                opportunities to apply my skills in real-world software development.
+                building robust systems and full-stack applications.
             </p>
             <div class="hero-cta animate-fade-up">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -73,8 +72,8 @@
                 <div class="about-text">
                     <p>
                         Hello! I'm Jun Allen, an Information Technology student majoring in 
-                        <span class="highlight">Software Engineering</span> at my university. My journey in 
-                        software development started with a curiosity about how systems work behind the scenes, 
+                        <span class="highlight">Software Engineering</span>. My journey in 
+                        software development started with a curiosity about how systems work, 
                         which naturally led me to develop a strong interest in <span class="highlight">backend & frontend development</span>
                         , <span class="highlight">database management</span> and <span class="highlight">system design</span>.
                     </p>
@@ -84,12 +83,12 @@
                         I enjoy architecting solutions that are not only functional but also maintainable 
                         and scalable.
                     </p>
-                    <p>
+                    <!-- <p>
                         Recently, I've been exploring <span class="highlight">AI and Machine Learning</span> 
                         as emerging industry trends. I've applied these concepts practically by developing 
                         a Python-based content recommendation system using techniques such as TF-IDF, SBERT, 
                         and cosine similarity.
-                    </p>
+                    </p> -->
                     <!-- <p>Here are some technologies I've been working with:</p>
                     <ul class="about-tech-list">
                         <li>JavaScript</li>
@@ -193,6 +192,7 @@
                     </div>
                     <h3 class="skill-title">AI / ML (Introductory)</h3>
                     <ul class="skill-list">
+                        <li>Recommendation Systems</li>
                         <li>Content-Based Filtering</li>
                         <li>Term Frequency - Inverse Document Frequency</li>
                         <li>Sentence-BERT</li>
@@ -262,13 +262,12 @@
                         </p>
                     </div>
                     <ul class="project-tech-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
                         <li>PHP</li>
                         <li>MySQL</li>
                         <li>JavaScript</li>
                         <li>Python</li>
-                        <li>TF-IDF</li>
-                        <li>SBERT</li>
-                        <li>KNN</li>
                     </ul>
                     <div class="project-links">
                         <a href="https://github.com/Prudence09/TUA-Electronic-Library-System" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
@@ -323,18 +322,29 @@
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                 </svg>
                             </a>
+                            <a href="https://tua-cat-attendance.free.nf/login.php" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Live Demo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
                         </div>
                     </div>
-                    <h4 class="project-card-title">C.A.T. Attendance System</h4>
+                    <h4 class="project-card-title">
+                        <span class="project-card-title-link" data-project="cat" role="button" tabindex="0">
+                            C.A.T. Attendance System
+                        </span>
+                    </h4>
                     <p class="project-card-description">
-                        is a QR code-based attendance management system designed for Trinity University of Asia's Citizenship Advancement Training (CAT) program 
+                        A QR code-based attendance management system designed for Trinity University of Asia's Citizenship Advancement Training (CAT) program 
                         that digitizes and automates attendance tracking.
                     </p>
                     <ul class="project-card-tech">
-                        <li>PHP</li>
-                        <li>JavaScript</li>
                         <li>HTML</li>
                         <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
                         <li>MySQL</li>
                     </ul>
                 </div>
@@ -354,15 +364,19 @@
                             </a>
                         </div>
                     </div>
-                    <h4 class="project-card-title">Trinity University of Asia Online Bookstore Bookstore</h4>
+                    <h4 class="project-card-title">
+                        <span class="project-card-title-link" data-project="bookstore" role="button" tabindex="0">
+                            Trinity University of Asia Online Bookstore
+                        </span>
+                    </h4>
                     <p class="project-card-description">
                         A Window desktop application focused on admin management and processes for a university's bookstore.
                     </p>
                     <ul class="project-card-tech">
                         <li>C# (.NET)</li>
-
                         <li>Java (Kotlin)</li>
                         <li>MySQL</li>
+                        <li>Bunifu</li>
                     </ul>
                 </div>
 
@@ -381,9 +395,13 @@
                             </a>
                         </div>
                     </div>
-                    <h4 class="project-card-title">Cryptocurrency Simulator Web Application</h4>
+                    <h4 class="project-card-title">
+                        <span class="project-card-title-link" data-project="crypto" role="button" tabindex="0">
+                            Cryptocurrency Trading Platform
+                        </span>
+                    </h4>
                     <p class="project-card-description">
-                        A web application that simulates a cryptocurrency trading platform complete with live book orders, deposits, withdrawal and asset and user management.
+                        A web application that simulates a cryptocurrency trading platform complete with live book orders, deposits, withdrawal, asset and user management.
                     </p>
                     <ul class="project-card-tech">
                         <li>Laravel</li>
@@ -396,25 +414,215 @@
         </div>
     </section>
 
+    <!-- Hackathons Section -->
+    <section class="section hackathons" id="hackathons">
+        <div class="container">
+            <h2 class="section-heading">
+                <span class="section-number"></span> Hackathons & Events
+            </h2>
+            <p class="section-description">
+                Collaborative coding events where I've challenged myself, learned new skills, and built innovative solutions.
+            </p>
+            
+            <div class="hackathons-grid">
+                <!-- Hackathon 1 -->
+                <div class="hackathon-card">
+                    <div class="hackathon-image-wrapper hackathon-gallery-trigger" data-hackathon="1" role="button" tabindex="0" aria-label="View hackathon gallery">
+                        <div class="hackathon-preview-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg> -->
+                            <img src="images/hackathons/event1/1.png" alt="Hackathon Event 1 Photo 1">
+                        </div>
+                        <div class="hackathon-image-overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <!-- <img src="images/hackathons/event1/1.jpg" alt="Hackathon Event 1 Photo 1"> -->
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="hackathon-content">
+                        <h3 class="hackathon-title">C{old} {ST}art Hackaton</h3>
+                        <p class="hackathon-description">
+                            A one-day sprint event focused on developing solutions based on pre-defined categories.
+                            Collaborated with a team to develop a working prototype.
+                        </p>
+                        <div class="hackathon-meta">
+                            <span class="hackathon-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Pasig City
+                            </span>
+                            <span class="hackathon-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                October 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hackathon 2 -->
+                <div class="hackathon-card">
+                    <div class="hackathon-image-wrapper hackathon-gallery-trigger" data-hackathon="2" role="button" tabindex="0" aria-label="View hackathon gallery">
+                        <div class="hackathon-preview-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg> -->
+                            <img src="images/hackathons/event2/5.jpg" alt="Hackathon Event 2 Photo 1">
+                        </div>
+                        <div class="hackathon-image-overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="hackathon-content">
+                        <h3 class="hackathon-title">13th IT Skills Olympics (C# Category)</h3>
+                        <p class="hackathon-description">
+                            A competitive programming event focusing on C# programming and problem solving skills.
+                            Developed efficient algorithms to solve complex challenges within a time limit. 
+                        </p>
+                        <div class="hackathon-meta">
+                            <span class="hackathon-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Quezon City
+                            </span>
+                            <span class="hackathon-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                November 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hackathon 3 -->
+                <div class="hackathon-card">
+                    <div class="hackathon-image-wrapper hackathon-gallery-trigger" data-hackathon="3" role="button" tabindex="0" aria-label="View hackathon gallery">
+                        <div class="hackathon-preview-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg> -->
+                            <img src="images/hackathons/event3/5.jpg" alt="Hackathon Event 3 Photo 1">
+                        </div>
+                        <div class="hackathon-image-overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="hackathon-content">
+                        <h3 class="hackathon-title">Alibaba AI Cloud Hackathon</h3>
+                        <p class="hackathon-description">
+                            A hackathon centered around AI and cloud computing technologies. 
+                            Collaborated with a team to develop an AI-powered solution leveraging Alibaba Cloud services.
+                        </p>
+                        <div class="hackathon-meta">
+                            <span class="hackathon-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Quezon City
+                            </span>
+                            <span class="hackathon-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                November 2025
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hackathon 4 -->
+                <div class="hackathon-card">
+                    <div class="hackathon-image-wrapper hackathon-gallery-trigger" data-hackathon="4" role="button" tabindex="0" aria-label="View hackathon gallery">
+                        <div class="hackathon-preview-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg> -->
+                            <img src="images/hackathons/event4/1.jpg" alt="Hackathon Event 4 Photo 1">
+                        </div>
+                        <div class="hackathon-image-overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="hackathon-content">
+                        <h3 class="hackathon-title">Kadakareer x Home Credit's "AI in UX for Fintech"</h3>
+                        <p class="hackathon-description">
+                            A Gen AI-focused hackathon where teams pitched and built MVPs/prototypes for business ideas.
+                        </p>
+                        <div class="hackathon-meta">
+                            <span class="hackathon-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Taguig City
+                            </span>
+                            <span class="hackathon-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                November 2025
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Interests Section -->
-    <section class="section interests" id="interests">
+    <!-- <section class="section interests" id="interests">
         <div class="container">
             <h2 class="section-heading">
                 <span class="section-number"></span> What Interests Me
             </h2>
             <div class="interests-grid">
-                <div class="interest-card">
-                    <div class="interest-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 class="interest-title">Backend Development</h3>
-                    <p class="interest-description">Building robust server-side applications and APIs</p>
-                </div>
-
                 <div class="interest-card">
                     <div class="interest-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -425,6 +633,18 @@
                     </div>
                     <h3 class="interest-title">Software Architecture</h3>
                     <p class="interest-description">Designing scalable and maintainable system structures</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="interest-title">Backend Development</h3>
+                    <p class="interest-description">Building robust server-side applications and APIs</p>
                 </div>
 
                 <div class="interest-card">
@@ -459,7 +679,7 @@
                     <h3 class="interest-title">Learning New Tech</h3>
                     <p class="interest-description">Staying current with emerging technologies and trends</p>
                 </div>
-
+                
                 <div class="interest-card">
                     <div class="interest-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -471,7 +691,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section class="section contact" id="contact">
@@ -483,8 +703,7 @@
                 <div class="contact-info">
                     <h3 class="contact-title">Let's Connect</h3>
                     <p class="contact-description">
-                        I'm currently looking for internship opportunities where I can contribute, 
-                        learn, and grow as a software engineer. Whether you have a question, an 
+                        Whether you have a question, an 
                         opportunity, or just want to say hello, feel free to reach out!
                     </p>
                     <div class="contact-links">
@@ -495,13 +714,13 @@
                             </svg>
                             <span>jun.allen09@gmail.com</span>
                         </a>
-                        <a href="https://github.com/" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/allenjun09" class="contact-link" target="_blank" rel="noopener noreferrer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                             <span>GitHub</span>
                         </a>
-                        <a href="https://linkedin.com/" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <a href="www.linkedin.com/in/jun-allen-magsino-62ba1b1b8" class="contact-link" target="_blank" rel="noopener noreferrer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                                 <rect x="2" y="9" width="4" height="12"></rect>
@@ -697,7 +916,745 @@
                 </div>
             </div>
             
-            <p class="carousel-counter"><span id="current-slide">1</span> / <span id="total-slides">5</span></p>
+            <!-- <p class="carousel-counter"><span id="current-slide">1</span> / <span id="total-slides">5</span></p> -->
+        </div>
+    </div>
+
+    <!-- Hackathon Gallery Modals -->
+    <!-- Hackathon 1 Modal -->
+    <div class="modal hackathon-modal" id="hackathon-modal-1" aria-hidden="true" role="dialog" aria-labelledby="hackathon-modal-title-1">
+        <div class="modal-overlay hackathon-modal-overlay" data-hackathon="1"></div>
+        <div class="modal-container">
+            <button class="modal-close hackathon-modal-close" data-hackathon="1" aria-label="Close gallery">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="modal-title" id="hackathon-modal-title-1">C{old} {ST}art Hackaton - Gallery</h3>
+            
+            <div class="carousel hackathon-carousel" data-hackathon="1">
+                <div class="carousel-inner hackathon-carousel-inner">
+                    <div class="carousel-slide active">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 1</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event1/2.png" alt="Hackathon Event 1 Photo 1">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 2</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event1/3.png" alt="Hackathon Event 1 Photo 2">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 3</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event1/4.png" alt="Hackathon Event 1 Photo 3">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 3</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event1/5.png" alt="Hackathon Event 1 Photo 3">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 3</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event1/1.png" alt="Hackathon Event 1 Photo 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-prev hackathon-carousel-prev" data-hackathon="1" aria-label="Previous slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-btn-next hackathon-carousel-next" data-hackathon="1" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-indicators hackathon-carousel-indicators">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                    <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                    <button class="carousel-dot" data-slide="4" aria-label="Go to slide 5"></button>
+                </div>
+            </div>
+            
+            <!-- <p class="carousel-counter"><span class="hackathon-current-slide">1</span> / <span class="hackathon-total-slides">3</span></p> -->
+        </div>
+    </div>
+
+    <!-- Hackathon 2 Modal -->
+    <div class="modal hackathon-modal" id="hackathon-modal-2" aria-hidden="true" role="dialog" aria-labelledby="hackathon-modal-title-2">
+        <div class="modal-overlay hackathon-modal-overlay" data-hackathon="2"></div>
+        <div class="modal-container">
+            <button class="modal-close hackathon-modal-close" data-hackathon="2" aria-label="Close gallery">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="modal-title" id="hackathon-modal-title-2">13th IT Skills Olympics - Gallery</h3>
+            
+            <div class="carousel hackathon-carousel" data-hackathon="2">
+                <div class="carousel-inner hackathon-carousel-inner">
+                    <div class="carousel-slide active">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 1</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event2/3.jpg" alt="Hackathon Event 2 Photo 1">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 2</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event2/1.jpg" alt="Hackathon Event 2 Photo 2">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 3</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event2/2.jpg" alt="Hackathon Event 2 Photo 3">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 4</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event2/4.jpg" alt="Hackathon Event 2 Photo 4">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-prev hackathon-carousel-prev" data-hackathon="2" aria-label="Previous slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-btn-next hackathon-carousel-next" data-hackathon="2" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-indicators hackathon-carousel-indicators">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                    <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                </div>
+            </div>
+            
+            <!-- <p class="carousel-counter"><span class="hackathon-current-slide">1</span> / <span class="hackathon-total-slides">3</span></p> -->
+        </div>
+    </div>
+
+    <!-- Hackathon 3 Modal -->
+    <div class="modal hackathon-modal" id="hackathon-modal-3" aria-hidden="true" role="dialog" aria-labelledby="hackathon-modal-title-3">
+        <div class="modal-overlay hackathon-modal-overlay" data-hackathon="3"></div>
+        <div class="modal-container">
+            <button class="modal-close hackathon-modal-close" data-hackathon="3" aria-label="Close gallery">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="modal-title" id="hackathon-modal-title-3">Alibaba AI Cloud Hackathon - Gallery</h3>
+            
+            <div class="carousel hackathon-carousel" data-hackathon="3">
+                <div class="carousel-inner hackathon-carousel-inner">
+                    <div class="carousel-slide active">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 1</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event3/3.jpg" alt="Hackathon Event 3 Photo 1">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 2</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event3/2.jpg" alt="Hackathon Event 3 Photo 2">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 3</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event3/1.jpg" alt="Hackathon Event 3 Photo 3">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 3</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event3/4.jpg" alt="Hackathon Event 3 Photo 3">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 3</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event3/6.jpg" alt="Hackathon Event 3 Photo 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-prev hackathon-carousel-prev" data-hackathon="3" aria-label="Previous slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-btn-next hackathon-carousel-next" data-hackathon="3" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-indicators hackathon-carousel-indicators">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                    <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                    <button class="carousel-dot" data-slide="4" aria-label="Go to slide 5"></button>
+                </div>
+            </div>
+            
+            <!-- <p class="carousel-counter"><span class="hackathon-current-slide">1</span> / <span class="hackathon-total-slides">3</span></p> -->
+        </div>
+    </div>
+
+    <!-- Hackathon 4 Modal -->
+    <div class="modal hackathon-modal" id="hackathon-modal-4" aria-hidden="true" role="dialog" aria-labelledby="hackathon-modal-title-4">
+        <div class="modal-overlay hackathon-modal-overlay" data-hackathon="4"></div>
+        <div class="modal-container">
+            <button class="modal-close hackathon-modal-close" data-hackathon="4" aria-label="Close gallery">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="modal-title" id="hackathon-modal-title-4">"AI in UX for Fintech" - Gallery</h3>
+            
+            <div class="carousel hackathon-carousel" data-hackathon="4">
+                <div class="carousel-inner hackathon-carousel-inner">
+                    <div class="carousel-slide active">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 1</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event4/2.jpg" alt="Hackathon Event 4 Photo 1">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 2</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event4/3.png" alt="Hackathon Event 4 Photo 2">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Event Photo 3</span>
+                            <span class="slide-description">Add your hackathon images here</span> -->
+                            <img src="images/hackathons/event4/1.jpg" alt="Hackathon Event 4 Photo 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-prev hackathon-carousel-prev" data-hackathon="4" aria-label="Previous slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-btn-next hackathon-carousel-next" data-hackathon="4" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-indicators hackathon-carousel-indicators">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                </div>
+            </div>
+            
+            <!-- <p class="carousel-counter"><span class="hackathon-current-slide">1</span> / <span class="hackathon-total-slides">3</span></p> -->
+        </div>
+    </div>
+
+    <!-- Other Projects Gallery Modals -->
+    <!-- CAT Attendance System Modal -->
+    <div class="modal project-modal" id="project-modal-cat" aria-hidden="true" role="dialog" aria-labelledby="project-modal-title-cat">
+        <div class="modal-overlay project-modal-overlay" data-project="cat"></div>
+        <div class="modal-container">
+            <button class="modal-close project-modal-close" data-project="cat" aria-label="Close gallery">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="modal-title" id="project-modal-title-cat">C.A.T. Attendance System - Gallery</h3>
+            
+            <div class="carousel project-carousel" data-project="cat">
+                <div class="carousel-inner project-carousel-inner">
+                    <div class="carousel-slide active">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg> -->
+                            <!-- <span class="slide-title">Screenshot 1</span> 
+                            <span class="slide-description">Add your project images to images/CAT attendance</span>  -->
+                            <img src="images/CAT attendance/1.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 2</span>
+                            <span class="slide-description">Add your project images to images/CAT attendance/</span> -->
+                            <img src="images/CAT attendance/2.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/CAT attendance/</span> -->
+                            <img src="images/CAT attendance/3.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/CAT attendance/</span> -->
+                            <img src="images/CAT attendance/4.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/CAT attendance/</span> -->
+                            <img src="images/CAT attendance/6.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/CAT attendance/</span> -->
+                            <img src="images/CAT attendance/7.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/CAT attendance/</span> -->
+                            <img src="images/CAT attendance/8.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/CAT attendance/</span> -->
+                            <img src="images/CAT attendance/9.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/CAT attendance/</span> -->
+                            <img src="images/CAT attendance/10.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/CAT attendance/</span> -->
+                            <img src="images/CAT attendance/11.PNG" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-prev project-carousel-prev" data-project="cat" aria-label="Previous slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-btn-next project-carousel-next" data-project="cat" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-indicators project-carousel-indicators">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                    <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                    <button class="carousel-dot" data-slide="4" aria-label="Go to slide 5"></button>
+                    <button class="carousel-dot" data-slide="5" aria-label="Go to slide 6"></button>
+                    <button class="carousel-dot" data-slide="6" aria-label="Go to slide 7"></button>
+                    <button class="carousel-dot" data-slide="7" aria-label="Go to slide 8"></button>
+                    <button class="carousel-dot" data-slide="8" aria-label="Go to slide 9"></button>
+                    <button class="carousel-dot" data-slide="9" aria-label="Go to slide 10"></button>
+                </div>
+            </div>
+            
+            <!-- <p class="carousel-counter"><span class="project-current-slide">1</span> / <span class="project-total-slides">3</span></p> -->
+        </div>
+    </div>
+
+    <!-- Online Bookstore Modal -->
+    <div class="modal project-modal" id="project-modal-bookstore" aria-hidden="true" role="dialog" aria-labelledby="project-modal-title-bookstore">
+        <div class="modal-overlay project-modal-overlay" data-project="bookstore"></div>
+        <div class="modal-container">
+            <button class="modal-close project-modal-close" data-project="bookstore" aria-label="Close gallery">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="modal-title" id="project-modal-title-bookstore">TUA Online Bookstore - Gallery</h3>
+            
+            <div class="carousel project-carousel" data-project="bookstore">
+                <div class="carousel-inner project-carousel-inner">
+                    <div class="carousel-slide active">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 1</span>
+                            <span class="slide-description">Add your project images to images/online bookstore/</span> -->
+                            <img src="images/online bookstore/1.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 2</span>
+                            <span class="slide-description">Add your project images to images/online bookstore/</span> -->
+                            <img src="images/online bookstore/2.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/online bookstore/</span> -->
+                            <img src="images/online bookstore/3.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/online bookstore/</span> -->
+                            <img src="images/online bookstore/4.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/online bookstore/</span> -->
+                            <img src="images/online bookstore/5.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/online bookstore/</span> -->
+                            <img src="images/online bookstore/6.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/online bookstore/</span> -->
+                            <img src="images/online bookstore/7.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/online bookstore/</span> -->
+                            <img src="images/online bookstore/8.PNG" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-prev project-carousel-prev" data-project="bookstore" aria-label="Previous slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-btn-next project-carousel-next" data-project="bookstore" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-indicators project-carousel-indicators">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                    <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                    <button class="carousel-dot" data-slide="4" aria-label="Go to slide 5"></button>
+                    <button class="carousel-dot" data-slide="5" aria-label="Go to slide 6"></button>
+                    <button class="carousel-dot" data-slide="6" aria-label="Go to slide 7"></button>
+                    <button class="carousel-dot" data-slide="7" aria-label="Go to slide 8"></button>
+                </div>
+            </div>
+            
+            <!-- <p class="carousel-counter"><span class="project-current-slide">1</span> / <span class="project-total-slides">3</span></p> -->
+        </div>
+    </div>
+
+    <!-- Cryptocurrency Trading Platform Modal -->
+    <div class="modal project-modal" id="project-modal-crypto" aria-hidden="true" role="dialog" aria-labelledby="project-modal-title-crypto">
+        <div class="modal-overlay project-modal-overlay" data-project="crypto"></div>
+        <div class="modal-container">
+            <button class="modal-close project-modal-close" data-project="crypto" aria-label="Close gallery">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="modal-title" id="project-modal-title-crypto">Cryptocurrency Trading Platform - Gallery</h3>
+            
+            <div class="carousel project-carousel" data-project="crypto">
+                <div class="carousel-inner project-carousel-inner">
+                    <div class="carousel-slide active">
+                        <div class="slide-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 1</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 2</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-prev project-carousel-prev" data-project="crypto" aria-label="Previous slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-btn-next project-carousel-next" data-project="crypto" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-indicators project-carousel-indicators">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                </div>
+            </div>
+            
+            <!-- <p class="carousel-counter"><span class="project-current-slide">1</span> / <span class="project-total-slides">3</span></p> -->
         </div>
     </div>
 
