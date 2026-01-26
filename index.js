@@ -104,8 +104,10 @@ function handleSectionVisibility() {
     });
 }
 
-// ===== Contact Form Handling =====
-function handleFormSubmit(e) {
+// ===== Contact Form Handling with Forminit =====
+const FORMINIT_FORM_ID = 'oojvrprqn5u';
+
+async function handleFormSubmit(e) {
     e.preventDefault();
     
     // Get form data
@@ -124,18 +126,38 @@ function handleFormSubmit(e) {
         return;
     }
     
-    // Simulate form submission (frontend only)
-    // In production, this would send data to a backend
-    showFormMessage('Thank you for your message! I\'ll get back to you soon.', 'success');
+    // Show loading state
+    const submitBtn = contactForm.querySelector('.form-submit');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Sending...';
+    submitBtn.disabled = true;
     
-    // Reset form
-    contactForm.reset();
-    
-    // Hide message after 5 seconds
-    setTimeout(() => {
-        formMessage.classList.remove('success', 'error');
-        formMessage.style.display = 'none';
-    }, 5000);
+    try {
+        // Initialize Forminit and submit
+        const forminit = new Forminit();
+        const formData = new FormData(contactForm);
+        const { error } = await forminit.submit(FORMINIT_FORM_ID, formData);
+        
+        if (error) {
+            showFormMessage('Failed to send message. Please try again.', 'error');
+        } else {
+            showFormMessage('Thank you for your message! I\'ll get back to you soon.', 'success');
+            contactForm.reset();
+        }
+    } catch (err) {
+        showFormMessage('An error occurred. Please try again later.', 'error');
+        console.error('Forminit error:', err);
+    } finally {
+        // Restore button state
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            formMessage.classList.remove('success', 'error');
+            formMessage.style.display = 'none';
+        }, 5000);
+    }
 }
 
 function isValidEmail(email) {

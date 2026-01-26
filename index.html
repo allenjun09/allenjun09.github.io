@@ -8,6 +8,8 @@
     <meta name="author" content="Jun Allen Magsino">
     <title>Jun Allen Magsino | Software Engineer</title>
     <link rel="stylesheet" href="index.css">
+    <!-- Forminit SDK -->
+    <script src="https://forminit.com/sdk/v1/forminit.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -50,7 +52,7 @@
             <!-- <h2 class="hero-tagline animate-fade-up">I build things for the web.</h2> -->
             <p class="hero-description animate-fade-up">
                 A <span class="highlight">BS Information Technology major in Software Engineering</span> student passionate about 
-                building robust systems and full-stack applications.
+                building robust systems, applications and solutions.
             </p>
             <div class="hero-cta animate-fade-up">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -251,12 +253,12 @@
                     <div class="project-description">
                         <p>
                             A comprehensive web-based Library Management System designed for students and 
-                            librarians. The system features user authentication, book search and 
+                            librarians. It features user authentication, book search and 
                             filtering, seamless book requesting, reservation and borrowing, user management, 
-                            password recovery, and role-based access control.
+                            attendance monitoring and reports generation.
                         </p>
                         <p>
-                            The standout feature is a <span class="highlight">Python-based machine learning 
+                            The system includes <span class="highlight">Python-based machine learning 
                             recommendation system</span> that provides personalized book suggestions using 
                             content-based filtering with TF-IDF, SBERT embeddings, and K-Nearest Neigbors.
                         </p>
@@ -733,15 +735,15 @@
                 <form class="contact-form" id="contact-form">
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                        <input type="text" id="name" name="fi-sender-fullName" class="form-input" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                        <input type="email" id="email" name="fi-sender-email" class="form-input" placeholder="your.email@example.com" required>
                     </div>
                     <div class="form-group">
                         <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
+                        <textarea id="message" name="fi-text-message" class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary form-submit">
                         Send Message
@@ -760,12 +762,12 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-social">
-                <a href="https://github.com/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/allenjun09" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="https://linkedin.com/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/jun-allen-magsino-62ba1b1b8/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
@@ -793,7 +795,7 @@
     <div class="side-element side-social">
         <ul class="side-social-list">
             <li>
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/allenjun09" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
@@ -892,6 +894,78 @@
                             <span class="slide-title">Transcation Page</span>
                         </div>
                     </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-description">Librarian dashboard for managing books and users</span> -->
+                            <img src="images/library/7.PNG" alt="Jun Allen Magsino">
+                            <span class="slide-title">Transcation Page</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-description">Librarian dashboard for managing books and users</span> -->
+                            <img src="images/library/8.PNG" alt="Jun Allen Magsino">
+                            <span class="slide-title">Transcation Page</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-description">Librarian dashboard for managing books and users</span> -->
+                            <img src="images/library/9.PNG" alt="Jun Allen Magsino">
+                            <span class="slide-title">Transcation Page</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-description">Librarian dashboard for managing books and users</span> -->
+                            <img src="images/library/10.PNG" alt="Jun Allen Magsino">
+                            <span class="slide-title">Transcation Page</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-description">Librarian dashboard for managing books and users</span> -->
+                            <img src="images/library/11.PNG" alt="Jun Allen Magsino">
+                            <span class="slide-title">Transcation Page</span>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-description">Librarian dashboard for managing books and users</span> -->
+                            <img src="images/library/12.PNG" alt="Jun Allen Magsino">
+                            <span class="slide-title">Transcation Page</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Carousel Navigation -->
@@ -913,6 +987,13 @@
                     <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
                     <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
                     <button class="carousel-dot" data-slide="4" aria-label="Go to slide 5"></button>
+                    <button class="carousel-dot" data-slide="5" aria-label="Go to slide 6"></button>
+                    <button class="carousel-dot" data-slide="6" aria-label="Go to slide 7"></button>
+                    <button class="carousel-dot" data-slide="7" aria-label="Go to slide 8"></button>
+                    <button class="carousel-dot" data-slide="8" aria-label="Go to slide 9"></button>
+                    <button class="carousel-dot" data-slide="9" aria-label="Go to slide 10"></button>
+                    <button class="carousel-dot" data-slide="10" aria-label="Go to slide 11"></button>
+                    <button class="carousel-dot" data-slide="11" aria-label="Go to slide 12"></button>
                 </div>
             </div>
             
@@ -1603,35 +1684,110 @@
                 <div class="carousel-inner project-carousel-inner">
                     <div class="carousel-slide active">
                         <div class="slide-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                                 <polyline points="21 15 16 10 5 21"></polyline>
                             </svg>
                             <span class="slide-title">Screenshot 1</span>
-                            <span class="slide-description">Add your project images to images/crypto simulator/</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span> -->
+                            <img src="images/crypto simulator/landing page.png" alt="">
                         </div>
                     </div>
                     <div class="carousel-slide">
                         <div class="slide-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                                 <polyline points="21 15 16 10 5 21"></polyline>
                             </svg>
                             <span class="slide-title">Screenshot 2</span>
-                            <span class="slide-description">Add your project images to images/crypto simulator/</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span> -->
+                            <img src="images/crypto simulator/user dashboard.png" alt="">
                         </div>
                     </div>
                     <div class="carousel-slide">
                         <div class="slide-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                                 <polyline points="21 15 16 10 5 21"></polyline>
                             </svg>
                             <span class="slide-title">Screenshot 3</span>
-                            <span class="slide-description">Add your project images to images/crypto simulator/</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span> -->
+                            <img src="images/crypto simulator/kyc verification page.png" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span> -->
+                            <img src="images/crypto simulator/wallet page.png" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span> -->
+                            <img src="images/crypto simulator/trading page.png" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span> -->
+                            <img src="images/crypto simulator/2FA Authentication page.png" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span> -->
+                            <img src="images/crypto simulator/admin dashboard.png" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span> -->
+                            <img src="images/crypto simulator/user management page.png" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <span class="slide-title">Screenshot 3</span>
+                            <span class="slide-description">Add your project images to images/crypto simulator/</span> -->
+                            <img src="images/crypto simulator/system setting.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -1651,6 +1807,12 @@
                     <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
                     <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
                     <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                    <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                    <button class="carousel-dot" data-slide="4" aria-label="Go to slide 5"></button>
+                    <button class="carousel-dot" data-slide="5" aria-label="Go to slide 6"></button>
+                    <button class="carousel-dot" data-slide="6" aria-label="Go to slide 7"></button>
+                    <button class="carousel-dot" data-slide="7" aria-label="Go to slide 8"></button>
+                    <button class="carousel-dot" data-slide="8" aria-label="Go to slide 9"></button>
                 </div>
             </div>
             
