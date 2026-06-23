@@ -493,13 +493,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ===== HACKATHON GALLERY MODALS =====
 
-// Track current slide for each hackathon modal
-const hackathonCarouselState = {
-    1: { currentSlide: 0, totalSlides: 3 },
-    2: { currentSlide: 0, totalSlides: 3 },
-    3: { currentSlide: 0, totalSlides: 3 },
-    4: { currentSlide: 0, totalSlides: 3 }
-};
+// Track current slide for each hackathon modal (initialized from DOM)
+const hackathonCarouselState = {};
+
+function ensureHackathonCarouselState(hackathonId, totalSlides) {
+    if (!hackathonCarouselState[hackathonId]) {
+        hackathonCarouselState[hackathonId] = { currentSlide: 0, totalSlides };
+    }
+    return hackathonCarouselState[hackathonId];
+}
 
 // Currently active hackathon modal
 let activeHackathonModal = null;
@@ -540,6 +542,7 @@ function goToHackathonSlide(hackathonId, index) {
     const currentSlideEl = modal.querySelector('.hackathon-current-slide');
     
     const totalSlides = slides.length;
+    ensureHackathonCarouselState(hackathonId, totalSlides);
     
     // Handle wrap-around
     if (index < 0) {
@@ -586,6 +589,12 @@ function prevHackathonSlide(hackathonId) {
 
 // Initialize hackathon modal event listeners
 function initializeHackathonModalListeners() {
+    document.querySelectorAll('.hackathon-carousel').forEach(carousel => {
+        const hackathonId = carousel.getAttribute('data-hackathon');
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        ensureHackathonCarouselState(hackathonId, slides.length);
+    });
+
     // Open modal triggers
     const hackathonTriggers = document.querySelectorAll('.hackathon-gallery-trigger');
     hackathonTriggers.forEach(trigger => {
